@@ -7,6 +7,7 @@ import time
 import threading
 from multiprocessing import freeze_support
 from lastversion import lastversion
+from Telegram import TelegramBotApi
 
 import utils
 from MainRunner import MainThreadRunner
@@ -104,6 +105,11 @@ if __name__ == "__main__":
             if spec_config['room_id'] in runner_dict:
                 runner_dict[spec_config['room_id']].mr.config = config
             else:
+                t = TelegramBotApi(config)
+                t.common_request('POST', 'sendMessage', data={
+                    'chat_id': -1001566570431,
+                    'text': '启动配置：' + json.dumps(spec_config)
+                })
                 tr = MainThreadRunner(config)
                 tr.setDaemon(True)
                 runner_dict[spec_config['room_id']] = tr
