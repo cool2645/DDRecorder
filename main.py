@@ -65,10 +65,11 @@ if __name__ == "__main__":
             'spec': spec_config
         }
         t = TelegramBotApi(config)
-        t.common_request('POST', 'sendMessage', data={
+        res = t.common_request('POST', 'sendMessage', data={
             'chat_id': -1001566570431,
             'text': '启动配置：' + json.dumps(spec_config)
-        })
+        }).json()
+        print(res)
         tr = MainThreadRunner(config)
         tr.setDaemon(True)
         runner_dict[spec_config['room_id']] = tr
@@ -111,10 +112,11 @@ if __name__ == "__main__":
                 runner_dict[spec_config['room_id']].mr.config = config
             else:
                 t = TelegramBotApi(config)
-                t.common_request('POST', 'sendMessage', data={
+                res = t.common_request('POST', 'sendMessage', data={
                     'chat_id': -1001566570431,
                     'text': '启动配置：' + json.dumps(spec_config)
-                })
+                }).json()
+                print(res)
                 tr = MainThreadRunner(config)
                 tr.setDaemon(True)
                 runner_dict[spec_config['room_id']] = tr

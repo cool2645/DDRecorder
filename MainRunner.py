@@ -34,10 +34,11 @@ class MainRunner():
         p = Processor(config, record_dir, danmu_path)
         p.run()
         t = TelegramBotApi(config)
-        t.common_request('POST', 'sendMessage', data={
+        res = t.common_request('POST', 'sendMessage', data={
             'chat_id': -1001566570431,
             'text': '已完成录制：' + json.dumps(self.bl.room_info)
-        })
+        }).json()
+        print(res)
 
         if config.get('spec',{}).get('uploader',{}).get('record',{}).get('upload_record',False) or config.get('spec',{}).get('uploader',{}).get('clips',{}).get('upload_clips',False):
             current_state.value = int(utils.state.UPLOADING_TO_BILIBILI)
