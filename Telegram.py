@@ -29,7 +29,7 @@ class TelegramBotApi:
         self.config = config
 
     def common_request(self, method: str, url: str, params: dict = None, data: dict = None) -> requests.Response:
-        url = self.config.get('root', {}).get('telegramUrl', '/') + url
+        url = self.config.get('root', {}).get('telegram_url', '/') + url
         try:
             connection = None
             if method == 'GET':
