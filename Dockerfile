@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMD ["/bin/sh", "-c", "python -u main.py config/config.json > ./log/recorder.log 2>&1"]
+CMD ["python", "-u", "main.py", "config/config.json"]
