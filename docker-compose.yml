@@ -2,7 +2,6 @@ version: "3"
 services:
   recorder:
     build: .
-    user: nginx
     volumes:
       - ./config:/usr/src/app/config
       - ./log:/usr/src/app/log
