@@ -20,7 +20,7 @@
         {
             "room_id": "5265",
             "recorder": {
-                "keep_raw_record": false
+                "keep_raw_record": true
             },
             "parser": {
                 "interval": 30,
@@ -36,8 +36,8 @@
             },
             "uploader": {
                 "account": {
-                    "username": "",
-                    "password": ""
+                    "access_token": "",
+                    "refresh_token": ""
                 },
                 "copyright": 2,
                 "record": {
@@ -78,7 +78,7 @@
         }, {
             "room_id": "3915945",
             "recorder": {
-                "keep_raw_record": false
+                "keep_raw_record": true
             },
             "parser": {
                 "interval": 30,
@@ -94,8 +94,8 @@
             },
             "uploader": {
                 "account": {
-                    "username": "",
-                    "password": ""
+                    "access_token": "",
+                    "refresh_token": ""
                 },
                 "copyright": 2,
                 "record": {
@@ -141,7 +141,7 @@
         {
             "room_id": "870984",
             "recorder": {
-                "keep_raw_record": false
+                "keep_raw_record": true
             },
             "parser": {
                 "interval": 30,
@@ -157,8 +157,8 @@
             },
             "uploader": {
                 "account": {
-                    "username": "",
-                    "password": ""
+                    "access_token": "",
+                    "refresh_token": ""
                 },
                 "copyright": 2,
                 "record": {
@@ -202,9 +202,9 @@
             "backup": false
         },
         {
-            "room_id": "4098868",
+            "room_id": "5513082",
             "recorder": {
-                "keep_raw_record": false
+                "keep_raw_record": true
             },
             "parser": {
                 "interval": 30,
@@ -220,46 +220,36 @@
             },
             "uploader": {
                 "account": {
-                    "username": "",
-                    "password": ""
+                    "access_token": "",
+                    "refresh_token": ""
                 },
                 "copyright": 2,
                 "record": {
-                    "upload_record": false,
+                    "upload_record": true,
                     "keep_record_after_upload": true,
                     "split_interval": 3600,
-                    "title": "【米糊zzZ】{date} 直播录播",
+                    "title": "【布偶梨子】{date} 直播录播",
                     "tid": 27,
                     "tags": [
                         "直播录播",
-                        "米糊zzZ",
-                        "配音",
-                        "聊天",
-                        "游戏",
-                        "唐可可的诱惑",
-                        "声优",
-                        "lovelive",
-                        "liella"
+                        "雀魂",
+                        "日本麻将",
+                        "桌游棋牌"
                     ],
-                    "desc": "切片自{date} 米糊zzZ 直播\n---------------------------------------\n本视频由全自动切片型智能DD机上传~"
+                    "desc": "切片自{date} 布偶梨子 直播\n---------------------------------------\n本视频由全自动切片型智能DD机上传~"
                 },
                 "clips": {
                     "upload_clips": false,
                     "keep_clips_after_upload": true,
-                    "title": "【米糊zzZ】{date}直播剪辑【自动切片】",
-                    "tid": 27,
+                    "title": "【布偶梨子】{date}直播剪辑【自动切片】",
+                    "tid": 173,
                     "tags": [
                         "直播录播",
-                        "米糊zzZ",
-                        "配音",
-                        "聊天",
-                        "游戏",
-                        "唐可可的诱惑",
-                        "声优",
-                        "lovelive",
-                        "liella"
+                        "雀魂",
+                        "日本麻将",
+                        "桌游棋牌"
                     ],
-                    "desc": "切片自{date} 米糊zzZ 直播\n---------------------------------------\n本视频由全自动切片型智能DD机剪辑上传~"
+                    "desc": "切片自{date} 布偶梨子 直播\n---------------------------------------\n本视频由全自动切片型智能DD机剪辑上传~"
                 }
             },
             "backup": false
