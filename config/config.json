@@ -43,7 +43,7 @@
                 "record": {
                     "upload_record": false,
                     "keep_record_after_upload": true,
-                    "split_interval": 3600,
+                    "split_interval": 14000,
                     "title": "【Liyuu_】{date} 直播录播",
                     "tid": 27,
                     "tags": [
@@ -101,8 +101,8 @@
                 "record": {
                     "upload_record": false,
                     "keep_record_after_upload": true,
-                    "split_interval": 3600,
-                    "title": "【子刷子】{date} 直播录播",
+                    "split_interval": 14000,
+                    "title": "【子刷子】{month}.{day}录播：{room_name}",
                     "tid": 27,
                     "tags": [
                         "直播录播",
@@ -115,7 +115,7 @@
                         "lovelive",
                         "liella"
                     ],
-                    "desc": "切片自{date} 子刷子 直播\n---------------------------------------\n本视频由全自动切片型智能DD机上传~"
+                    "desc": "{date} 子刷子 直播\n---------------------------------------\n本视频由全自动切片型智能DD机上传~"
                 },
                 "clips": {
                     "upload_clips": false,
@@ -133,7 +133,7 @@
                         "lovelive",
                         "liella"
                     ],
-                    "desc": "切片自{date} 子刷子 直播\n---------------------------------------\n本视频由全自动切片型智能DD机剪辑上传~"
+                    "desc": "{date} 子刷子 直播\n---------------------------------------\n本视频由全自动切片型智能DD机剪辑上传~"
                 }
             },
             "backup": false
@@ -164,7 +164,7 @@
                 "record": {
                     "upload_record": false,
                     "keep_record_after_upload": true,
-                    "split_interval": 3600,
+                    "split_interval": 14000,
                     "title": "【萌えの耗纸w】{date} 直播录播",
                     "tid": 27,
                     "tags": [
@@ -227,7 +227,7 @@
                 "record": {
                     "upload_record": true,
                     "keep_record_after_upload": true,
-                    "split_interval": 3600,
+                    "split_interval": 14000,
                     "title": "【布偶梨子】{date} 直播录播",
                     "tid": 27,
                     "tags": [
