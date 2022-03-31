@@ -40,44 +40,4 @@ class TelegramBotApi:
                     url, headers=self.headers, params=params, data=data, verify=False, timeout=5)
             return connection
         except requests.exceptions.RequestException as e:
-            logging.error(self.generate_log(
-                "Request Error"+str(e)+traceback.format_exc()))
-
-    @abc.abstractmethod
-    def get_room_info(self):
-        pass
-
-    @abc.abstractmethod
-    def get_live_urls(self):
-        pass
-
-    def __check_live_status(self) -> bool:
-        room_info = self.get_room_info()
-        if room_info['status']:
-            logging.info(self.generate_log(
-                "直播间标题："+room_info['roomname']))
-            return True
-        else:
-            logging.info(self.generate_log("等待开播"))
-        return False
-
-    @property
-    def live_status(self) -> bool:
-        if datetime.datetime.now()-self.__last_check_time >= self.__allowed_check_interval:
-            logging.debug(self.generate_log("允许检查"))
-            try:
-                self.__live_status = self.__check_live_status()
-                self.__last_check_time = datetime.datetime.now()
-            except Exception as e:
-                logging.error(self.generate_log(
-                    "Status Error"+str(e)+traceback.format_exc()))
-        else:
-            logging.debug(self.generate_log("间隔不足，使用过去状态"))
-        return self.__live_status
-
-    @live_status.setter
-    def live_status(self, status: bool):
-        self.__live_status = status
-
-    def generate_log(self, content: str = '') -> str:
-        return f"[Site:{self.site_name} Room:{self.room_id}] {content}"
+            logging.error("Telegram Request Error"+str(e)+traceback.format_exc())

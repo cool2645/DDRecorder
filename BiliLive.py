@@ -1,3 +1,5 @@
+import datetime
+import json
 import logging
 
 import urllib3
@@ -29,6 +31,7 @@ class BiliLive(BaseLive):
             data['site_domain'] = self.site_domain
             data['status'] = response['data']['live_status'] == 1
             self.room_id = str(response['data']['room_id'])  # 解析完整 room_id
+            print(f"{datetime.datetime.now()}\t{json.dumps(response)}")
             response = self.common_request('GET', user_info_url, {
                 'roomid': self.room_id
             }).json()
